@@ -19,6 +19,7 @@ syntax on
 filetype on
 filetype indent on
 filetype plugin on
+set noswapfile
 
 " Mappings
 nmap <C-e> :Explore<CR>
