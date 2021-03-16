@@ -20,8 +20,10 @@ filetype on
 filetype indent on
 filetype plugin on
 set noswapfile
+set hlsearch
 
 " Mappings
 nmap <C-e> :Explore<CR>
 nmap <C-p> :Files<CR>
 nmap <C-f> :Rg<CR>
+noremap <space> :let @/ = ""<CR> 
