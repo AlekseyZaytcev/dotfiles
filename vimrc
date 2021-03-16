@@ -4,6 +4,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-ruby/vim-ruby'
 Plug 'arcticicestudio/nord-vim'
+Plug 'tpope/vim-commentary'
 
 " Initialize plugin system
 call plug#end()
@@ -23,7 +24,10 @@ set noswapfile
 set hlsearch
 
 " Mappings
+let mapleader = ","
+
 nmap <C-e> :Explore<CR>
 nmap <C-p> :Files<CR>
 nmap <C-f> :Rg<CR>
 noremap <space> :let @/ = ""<CR> 
+nmap gs :tab Gstatus<CR>
