@@ -1,10 +1,11 @@
 call plug#begin('~/.vim/plugged')
 
+" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-ruby/vim-ruby'
-Plug 'arcticicestudio/nord-vim'
 Plug 'tpope/vim-commentary'
+Plug 'drewtempelmeyer/palenight.vim'
 
 " Initialize plugin system
 call plug#end()
@@ -13,7 +14,8 @@ call plug#end()
 set rtp+=/usr/local/opt/fzf
 
 " General settings
-colorscheme nord
+set background=dark
+colorscheme palenight
 set mouse=a
 set nocompatible
 syntax on
