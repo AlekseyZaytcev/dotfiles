@@ -18,7 +18,6 @@ set rtp+=/usr/local/opt/fzf
 "
 set background=dark
 colorscheme palenight
-set mouse=a
 set nocompatible
 syntax on
 filetype on
@@ -53,5 +52,6 @@ nmap <C-f> :Rg<CR>
 nmap <C-l> :Buffers<CR>
 noremap <space> :let @/ = ""<CR> 
 nmap gs :tab Gstatus<CR>
-nmap <C-c> :let @+=expand("%")<CR>
 nmap <F10> :%bd<CR>:q<CR>
+nmap ctb :!ctags --tag-relative=yes --extras=f -R .<CR>
+nmap tn :tabnew<CR>
