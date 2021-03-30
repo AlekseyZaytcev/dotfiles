@@ -6,6 +6,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-commentary'
 Plug 'w0rp/ale'
+Plug 'vim-test/vim-test'
+Plug 'francoiscabrol/ranger.vim'
 Plug 'drewtempelmeyer/palenight.vim'
 
 " Initialize plugin system
@@ -29,6 +31,7 @@ set number
 
 " Plugin configs
 "
+" ALEfix
 let g:ale_sign_column_always = 1
 let g:ale_linters = {
 \   'ruby': ['rubocop'],
@@ -41,6 +44,15 @@ let g:ale_fixers = {
 \   'css': ['prettier']
 \}
 let g:ale_ruby_rubocop_executable = 'bundle'
+
+" VimTest
+let test#strategy = "vimterminal"
+let test#vim#term_position = "belowright"
+let test#ruby#rspec#options = {
+  \ 'nearest': '--backtrace',
+  \ 'file':    '--format documentation',
+  \ 'suite':   '--tag ~slow',
+\}
 
 " Mappings
 "
@@ -55,4 +67,8 @@ nmap gs :tab Gstatus<CR>
 nmap gb :Gblame<CR>
 nmap <F10> :%bd<CR>:q<CR>
 nmap ctb :!ctags --tag-relative=yes --extras=f -R .<CR>
-nmap tn :tabnew<CR>
+nmap <C-k> :bd<CR>
+nmap <silent> t<C-n> :TestNearest<CR>
+nmap <silent> t<C-f> :TestFile<CR>
+nmap <silent> t<C-l> :TestLast<CR>
+nmap <silent> t<C-g> :TestVisit<CR>
