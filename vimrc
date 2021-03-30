@@ -52,6 +52,7 @@ nmap <C-f> :Rg<CR>
 nmap <C-l> :Buffers<CR>
 noremap <space> :let @/ = ""<CR> 
 nmap gs :tab Gstatus<CR>
+nmap gb :Gblame<CR>
 nmap <F10> :%bd<CR>:q<CR>
 nmap ctb :!ctags --tag-relative=yes --extras=f -R .<CR>
 nmap tn :tabnew<CR>
