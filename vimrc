@@ -1,25 +1,25 @@
 call plug#begin('~/.vim/plugged')
 
-" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-commentary'
 Plug 'w0rp/ale'
 Plug 'vim-test/vim-test'
 Plug 'francoiscabrol/ranger.vim'
-Plug 'drewtempelmeyer/palenight.vim'
+Plug 'sickill/vim-monokai'
 
 " Initialize plugin system
 call plug#end()
 
 " To use fzf in Vim, add the following line to your .vimrc:
-set rtp+=/usr/local/opt/fzf
+" set rtp+=/usr/local/opt/fzf
 
 " General settings
 "
 set background=dark
-colorscheme palenight
+colorscheme monokai
 set nocompatible
 syntax on
 filetype on
@@ -28,6 +28,7 @@ filetype plugin on
 set noswapfile
 set hlsearch
 set number
+set mouse=a
 
 " Plugin configs
 "
