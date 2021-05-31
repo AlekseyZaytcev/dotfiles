@@ -63,6 +63,7 @@ nmap <C-e> :Explore<CR>
 nmap <C-p> :Files<CR>
 nmap <C-f> :Rg<CR>
 nmap <C-l> :Buffers<CR>
+nmap <C-i> :ALEFix<CR>
 noremap <space> :let @/ = ""<CR> 
 nmap gs :tab Gstatus<CR>
 nmap gb :Gblame<CR>
