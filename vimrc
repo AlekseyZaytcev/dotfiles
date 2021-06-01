@@ -10,6 +10,7 @@ Plug 'vim-test/vim-test'
 Plug 'francoiscabrol/ranger.vim'
 " Plug 'sickill/vim-monokai'
 Plug 'mhartington/oceanic-next'
+Plug 'vim-airline/vim-airline'
 
 " Initialize plugin system
 call plug#end()
@@ -57,6 +58,9 @@ let test#ruby#rspec#options = {
   \ 'file':    '--format documentation',
   \ 'suite':   '--tag ~slow',
 \}
+
+" VimAirline
+let g:airline_theme='oceanicnext'
 
 " Mappings
 "
