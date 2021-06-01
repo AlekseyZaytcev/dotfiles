@@ -8,7 +8,8 @@ Plug 'tpope/vim-commentary'
 Plug 'w0rp/ale'
 Plug 'vim-test/vim-test'
 Plug 'francoiscabrol/ranger.vim'
-Plug 'sickill/vim-monokai'
+" Plug 'sickill/vim-monokai'
+Plug 'mhartington/oceanic-next'
 
 " Initialize plugin system
 call plug#end()
@@ -19,7 +20,9 @@ call plug#end()
 " General settings
 "
 set background=dark
-colorscheme monokai
+" colorscheme monokai
+set t_Co=256
+colorscheme OceanicNext
 set nocompatible
 syntax on
 filetype on
