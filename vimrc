@@ -8,8 +8,7 @@ Plug 'tpope/vim-commentary'
 Plug 'w0rp/ale'
 Plug 'vim-test/vim-test'
 Plug 'francoiscabrol/ranger.vim'
-" Plug 'sickill/vim-monokai'
-Plug 'mhartington/oceanic-next'
+Plug 'sickill/vim-monokai'
 Plug 'vim-airline/vim-airline'
 
 " Initialize plugin system
@@ -21,9 +20,7 @@ call plug#end()
 " General settings
 "
 set background=dark
-" colorscheme monokai
-set t_Co=256
-colorscheme OceanicNext
+colorscheme monokai
 set nocompatible
 syntax on
 filetype on
@@ -58,9 +55,6 @@ let test#ruby#rspec#options = {
   \ 'file':    '--format documentation',
   \ 'suite':   '--tag ~slow',
 \}
-
-" VimAirline
-let g:airline_theme='oceanicnext'
 
 " Mappings
 "
