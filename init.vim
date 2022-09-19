@@ -18,3 +18,4 @@ noremap <space> :let @/ = ""<CR>
 nmap <C-p> :Files<CR>
 nmap <C-b> :Buffers<CR>
 nmap <C-f> :Ag<CR>
+nmap cp :let @+=@%<CR>
