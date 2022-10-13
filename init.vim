@@ -22,3 +22,6 @@ nmap <C-p> :Files<CR>
 nmap <C-b> :Buffers<CR>
 nmap <C-f> :Ag<CR>
 nmap cp :let @+=@%<CR>
+nmap tf :TestFile<CR>
+nmap tn :TestNearest<CR>
+nmap tl :lTestLast<CR>
