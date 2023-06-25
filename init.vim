@@ -1,27 +1,29 @@
 call plug#begin()
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-rails'
-Plug 'tomasr/molokai'
+Plug 'github/copilot.vim'
 Plug 'vim-test/vim-test'
+Plug 'tpope/vim-commentary'
+Plug 'lewis6991/gitsigns.nvim'
+Plug 'projekt0n/github-nvim-theme'
 call plug#end()
 
-let mapleader = ","
-set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
-set mouse=a
-set clipboard+=unnamedplus
+set softtabstop=2
+set shiftwidth=2
+set noexpandtab
 set number
-let g:molokai_original = 1
-let g:rehash256 = 1
-colorscheme molokai
+set clipboard+=unnamedplus
+colorscheme github_dark_dimmed
+au TextYankPost * silent! lua vim.highlight.on_yank()
 
-noremap <space> :let @/ = ""<CR>
-nmap <C-p> :Files<CR>
-nmap <C-b> :Buffers<CR>
+let test#strategy = "neovim"
+
+lua << EOF
+require('gitsigns').setup()
+EOF
+
 nmap <C-f> :Ag<CR>
-nmap cp :let @+=@%<CR>
-nmap tf :TestFile<CR>
-nmap tn :TestNearest<CR>
-nmap tl :lTestLast<CR>
+nmap <C-p> :Files<CR>
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>l :TestLast<CR>
