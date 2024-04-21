@@ -13,5 +13,6 @@ local config = wezterm.config_builder()
 -- Calamity	- smth interesting
 -- Retro	- green hell
 config.color_scheme = 'DoomOne'
+config.font = wezterm.font 'JetBrainsMono Nerd Font'
 
 return config
