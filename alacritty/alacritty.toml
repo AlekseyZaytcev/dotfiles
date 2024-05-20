@@ -1,3 +1,7 @@
-import = [
-    "~/.config/alacritty/solarized_light.toml"
+[window]
+startup_mode = "Fullscreen"
+
+[keyboard]
+bindings = [
+	{ key = "n", mods = "Control|Shift", action = "SpawnNewInstance" },
 ]
