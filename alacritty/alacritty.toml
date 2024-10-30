@@ -1,8 +1,12 @@
+
 [window]
 startup_mode = "Fullscreen"
 
-[keyboard]
-bindings = [
-	{ key = "n", mods = "Control|Shift", action = "SpawnNewInstance" },
-	{ key = "Enter", mods = "Super", action = "ToggleFullscreen" },
+[font]
+normal = { family = "JetBrainsMono Nerd Font Mono", style = "Regular" }
+size = 12
+
+[general]
+import = [
+    "~/.config/alacritty/monokai_pro.toml"
 ]
